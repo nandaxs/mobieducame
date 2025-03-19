@@ -1,0 +1,28 @@
+Tela sobre: exibir 4 seções nesta tela. 
+
+1 - Falar sobre mim: 
+
+Primeiro gostaria de agradecer pela chance de participar do processo seletivo e realizar o teste. Espero conquistar minha primeira oportunidade na Mobimark, onde poderei evoluir profissionalmente ao lado de uma equipe experiente e contribuir para projetos importantes.
+
+Minha jornada na tecnologia começou há um ano e seis meses, juntamente com meus estudos em Análise e Desenvolvimento de Sistemas. Entrei totalmente leiga com um sonho de me tornar uma ótima profissional na área, pode-se dizer que me identifico tanto com o front-end como o  back-end, então ainda penso na possibilidade de me aprofundar bem nas duas áreas. Meu objetivo esse semestre é uma oportunidade no mercado de trabalho para poder ver meu crescimento profissional através da experiência prática.
+
+Sou bem ambiciosa, comprometida, e dedicada com aquilo que quero construir com o meu tempo, desejo construir minha carreira com bastante prática, aprendizado contínuo, manter sempre atualizada e com a mente ativa para os estudos da minha área, com mais habilidade de solucionar problemas na linguagem de programação e ferramenta que eu for praticar diariamente, com estudos, projetos, paciência e oportunidade sempre de aprender com os profissionais mais experientes. Bom, acho que isso fala um pouco de mim em palavras, anseio em mostrar isso diariamente. 
+
+
+
+2 - Oque utilizou para desenvolver o projeto:
+
+Utilizei o Visual Studio Code para programar, NodeJs, aplicando a ferramenta intuitiva de interface do Material UI, juntamente com a biblioteca de requisição HTTP Axios
+
+
+
+
+3 - Dificuldades encontradas: 
+
+Minha maior dificuldade foi o tempo, pois pela falta de prática na ferramenta que precisei usar (ReactJs), só iria precisar de um tempo a mais para completar todo o projeto. Como ainda tenho muito da parte teórica, a prática ainda me deixa um pouco atrasada.
+
+
+
+4 - Sugestões: 
+
+Eu achei um ótimo teste, não seria necessário mudar nenhum requisito. È um teste complexo capaz de testar a capacidade de cada candidato no seu devido prazo estimado. 
