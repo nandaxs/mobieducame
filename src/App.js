@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Api from './services/Api';
+import api from './services/Api';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
@@ -16,6 +16,7 @@ import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import MuiCard from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
+import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 
 
 export default function App() {
@@ -30,8 +31,8 @@ export default function App() {
   const [open, setOpen] = useState(false);
 
   const handleLogin = () => {
-    axios.post("api/login/run", {
-      login: "fevisgueira@gmail.com",
+    api.post("login/run", {
+      email: "fevisgueira@gmail.com",
       senha: "53nh4Fernanda"
     })
 
@@ -103,11 +104,12 @@ export default function App() {
       event.preventDefault();
       return;
     }
+    console.log ("entrou teste2");
 
-    const email = event.target.email.value;
-    const password = event.target.password.value;
+    const email = 'fevisgueira@gmail.com';// event.target.email.value;
+    const senha = '53nh4Fernanda'; // event.target.password.value;
 
-    axios.post('api/login/run', { email, password })
+    api.post('login/run', { email, senha })
 
       .then(response => {
 
@@ -117,7 +119,7 @@ export default function App() {
         //Subindo nova versao
         localStorage.setItem('token', response.data.token);
 
-        window.location.href = '/';
+        //window.location.href = '/';
        
   
       })
@@ -162,7 +164,9 @@ export default function App() {
       setPasswordErrorMessage('');
     }
 
-    return isValid;
+    //return isValid;
+    if(isValid) handleSubmit();
+    else return isValid;
   };
 
   return (
@@ -179,8 +183,6 @@ export default function App() {
             Sign in
           </Typography>
           <Box
-            component="form"
-            onSubmit={handleSubmit}
             noValidate
             sx={{
               display: 'flex',
@@ -223,49 +225,13 @@ export default function App() {
                 color={passwordError ? 'error' : 'primary'}
               />
             </FormControl>
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
             <Button
               type="submit"
               fullWidth
               variant="contained"
-              onClick={validateInputs} >
+              onClick={handleLogin} >
               Sign in
             </Button>
-            <Link
-              component="button"
-              type="button"
-              onClick={handleClickOpen}
-              variant="body2"
-              sx={{ alignSelf: 'center' }} >
-              Forgot your password?
-            </Link>
-          </Box>
-          <Divider>or</Divider>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-            <Button
-              fullWidth
-              variant="outlined"
-              onClick={() => alert('Sign in with Google')} >
-              Sign in with Google
-            </Button>
-            <Button
-              fullWidth
-              variant="outlined"
-              onClick={() => alert('Sign in with Facebook')} >
-              Sign in with Facebook
-            </Button>
-            <Typography sx={{ textAlign: 'center' }}>
-              Don&apos;t have an account?{' '}
-              <Link
-                href="/material-ui/getting-started/templates/sign-in/"
-                variant="body2"
-                sx={{ alignSelf: 'center' }}>
-                Sign up
-              </Link>
-            </Typography>
           </Box>
         </Card>
       </SignInContainer>
