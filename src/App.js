@@ -114,7 +114,7 @@ export default function App() {
         console.log(response.data);
 
         //token de autenticação
-        //Subindo nova versao pra master
+        //Subindo nova versao
         localStorage.setItem('token', response.data.token);
 
         window.location.href = '/';
